@@ -1,0 +1,71 @@
+/* Practice set 1 
+#box {
+    background-color: blue;
+}
+
+.heading {
+    color: red;
+}
+
+button {
+    background-color: green;
+
+}
+*/
+
+/* Practice set 2 
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+* {
+    font-family: "Times New Roman";
+}
+
+#outer {
+    font-size: 25px;
+}
+
+#inner {
+    font-size: 10px;
+}
+*/
+
+/*Practice set 3
+div {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+}
+*/
+
+
+/* Navigation Bar */
+div {
+    background-color: black;
+    height: 60px;
+}
+
+a {
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+#domain {
+    color:chocolate;
+    font-family: "Times New Roman";
+    font-size: 25px;
+}
+
+.options {
+    font-size: 15px;
+    font-family: "Times New Roman";
+    color: white;
+}
+
+button {
+    background-color:chocolate;
+    color: white;
+}
