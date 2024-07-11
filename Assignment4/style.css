@@ -17,6 +17,10 @@ header {
     line-height: 30px;
 }
 
+#lName {
+    padding-left: 130px;
+}
+
 #major {
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
