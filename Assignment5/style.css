@@ -1,0 +1,16 @@
+.card {
+    height:700px;
+    width: 500px;
+}
+
+.sidebar {
+    text-align: center;
+    border-right: 6px dashed darkslategray;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: darkgreen;
+    margin-bottom: 13px;
+    display: block;
+}
