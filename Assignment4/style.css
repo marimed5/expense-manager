@@ -65,3 +65,19 @@ body {
 footer {
     background-color:#AA9ABA;
 }
+
+@media (max-width: 575px) {
+    main {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+    header {
+        text-align: center;
+    }
+    footer {
+        padding-right: 50px;
+    }
+    img {
+        height: 70px;
+    }
+}
