@@ -17,6 +17,10 @@ header {
     line-height: 30px;
 }
 
+#lName {
+    padding-left: 130px;
+}
+
 #major {
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
@@ -64,4 +68,34 @@ body {
 
 footer {
     background-color:#AA9ABA;
+}
+
+@media (max-width: 575px) {
+    main {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+    header {
+        text-align: center;
+        font-size: 30px;
+    }
+    #info {
+        font-size: 20px;
+    }
+    #major {
+        font-size: 20px;
+        padding-left: 0px;
+    }
+    .name {
+        font-size: 40px;
+    }
+    #lName {
+        padding-left: 0px;
+    }
+    footer {
+        padding-right: 50px;
+    }
+    img {
+        height: 70px;
+    }
 }
