@@ -8,8 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+
+    <!--Header Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" id="navbar">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.html">Recipe Master</a>
               <div class="collapse navbar-collapse" id="navbarText">
@@ -18,10 +20,10 @@
                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="features.html">Features</a>
+                    <a class="nav-link" href="#" onclick="changePage('features')">Features</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
+                    <a class="nav-link" href="#" onclick="changePage('about')">About Us</a>
                   </li>
                 </ul>
                 <span class="navbar-text" style="padding-right: 20px;">
@@ -30,20 +32,21 @@
               </div>
             </div>
         </nav>
-    </header><br>
+    </header>
+    <br><br><br>
 
 
-
-    <div class="container-fluid">
+    <div class="container-fluid" >
         <div class="row">
 
-            <!--Sidebar-->
+            <!--Sidebar on Left-->
             <div class="col-3">
-                <div class="sidebar" style="color: darkgreen;">
-                    <h3>Our Recipes</h3><br>
+                <div class="sidebar" style="color: #344e41;">
+                    <h3 id="sidebarHeader">Our Recipes</h3><br>
                     <ul class="list-unstyled recipes">
-                        <li><a href="filet.html" target="_blank">Filet Mignon</a></li>
-                        <li><a href="lobster.html">Lobster Thermidor</a></li>
+                        <li><a href="#" onclick="changePage('filet')">Filet Mignon</a></li>
+                        <li><a href="#" onclick="changePage('lobster')">Lobster Thermidor</a></li>
+                        <!--And so on-->
                         <li><a href="#">Truffle Risotto</a></li>
                         <li><a href="#">Duck à l'Orange</a></li>
                         <li><a href="#">Rack of Lamb</a></li>
@@ -61,73 +64,169 @@
                         <li><a href="#">Seafood Paella</a></li>
                         <li><a href="#">Beef Wellington</a></li>
                         <li><a href="#">Caviar Blini</a></li>
-                        <li><a href="#">Foie Gras with Fig Compote</a></li>
-                        <li><a href="#">Crab Stuffed Avocado</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!--Main Page-->
-            <div class="col">
-                <div class="main">
-                    <h3 style="color: darkgreen; text-align: center;">Take a Sneak Peak at our recipes:</h3><br>
-                    <div class="row row-cols-1 row-cols-md-2" style="text-align: center;">
 
-                        <div class="col">
-                            <div class="card mx-auto">
-                                <img src="https://plus.unsplash.com/premium_photo-1701889905370-86796636710a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D" class="card-img-top" id="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cucumber Toast</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
+            <!--Main Page on Right-->
+            <div class="col section active" id="main">
+
+                <h3 style="color: #344e41; text-align: center;">Take a Sneak Peak at our recipes:</h3><br>
+                <div class="row row-cols-1 row-cols-md-2" style="text-align: center;" data-bs-theme="dark">
+                    <div class="col">
+                        <div class="card mx-auto">
+                            <img src="https://plus.unsplash.com/premium_photo-1701889905370-86796636710a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D" class="card-img-top" id="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Cucumber Toast</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
-
-
-                        <div class="col">
-                            <div class="card mx-auto">
-                                <img src="https://images.unsplash.com/photo-1604634077134-6f774f610f47?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" id="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Avocado Toast</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col">
-                            <div class="card mx-auto">
-                                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" id="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Poached Egg</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col">
-                            <div class="card mx-auto">
-                                <img src="https://images.unsplash.com/photo-1606101273945-e9eba91c0dc4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top">
-                                <div class="card-body">
-                                    <h5 class="card-title">Banana Bread</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+
+
+                    <div class="col">
+                        <div class="card mx-auto">
+                            <img src="https://images.unsplash.com/photo-1606101273945-e9eba91c0dc4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Banana Bread</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                    <div class="col">
+                        <div class="card mx-auto">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" id="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Poached Egg</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="card mx-auto">
+                            <img src="https://images.unsplash.com/photo-1604634077134-6f774f610f47?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" id="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Avocado Toast</h5>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-
-
-
+                
             </div>
 
+
+
+            <!--Features Page-->
+            <div class="col section" id="features" style="text-align: center;">
+                <div class="col">
+                    <h3><b>Our Features!</b></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A maxime fuga reprehenderit ad eius natus excepturi, tempora dignissimos necessitatibus reiciendis eveniet velit aspernatur doloremque, sint quae illum quis ducimus recusandae?
+                    Et illo voluptas accusantium pariatur nisi repellat est reiciendis a. Accusamus, maiores! Natus sequi dicta porro ducimus harum vero neque non, tempore eveniet voluptatum at maxime consequuntur provident minima reiciendis?
+                    Asperiores voluptatibus suscipit aspernatur dicta libero sapiente, vero enim ab deleniti cum accusamus, dignissimos voluptas dolorem harum possimus, praesentium mollitia? Consequatur repudiandae veritatis qui delectus libero tempore fuga facere ullam.</p>
+                </div>
+                
+            </div>
+            
+            <!--About Us Page-->
+            <div class="col section" id="about" style="text-align: center;">
+                <h3><b>About Us!</b></h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, laudantium ullam. Officia qui accusamus molestias. Reprehenderit accusantium tempore cupiditate sequi, facilis voluptatem, voluptates minus odio harum maiores est dolorum repellendus!
+                        Quidem quam dignissimos unde commodi rem iusto magnam rerum laudantium delectus, numquam nam nobis odit, consequatur qui, modi cum nihil facere obcaecati excepturi? Repudiandae, maiores id. Officia, culpa? Dolore, quas.
+                        Possimus nemo perferendis asperiores repellendus accusamus cumque? Modi culpa sequi similique eligendi nisi veritatis nobis voluptates sapiente, officia ipsam quos optio velit consequatur architecto neque magnam recusandae est odio hic.
+                        Voluptates, soluta fuga impedit necessitatibus dolore ullam! Iure, atque voluptatem. Ipsam quibusdam magnam, et deserunt facilis laudantium, corrupti aperiam, explicabo doloremque accusantium recusandae esse fuga? Nostrum nesciunt omnis quae quidem!
+                        Perspiciatis, nesciunt. Atque alias nihil quasi esse ipsum dolorum! Necessitatibus, voluptatibus assumenda cum explicabo repellendus nam voluptatem molestiae voluptate in dolore dignissimos inventore modi at nisi, repellat distinctio nihil ex?
+                        Quasi, culpa illum. Ea officiis expedita impedit quas facere, totam voluptatibus ratione saepe soluta ut, repudiandae eum aperiam quia fuga nam id assumenda maxime quam sed iure, earum optio unde.
+                        Deleniti delectus vel assumenda id, laborum facilis at quibusdam autem esse corporis voluptate minima magni minus, necessitatibus qui nobis ab distinctio. Enim corporis excepturi omnis laudantium doloribus error labore cumque.
+                    </div>
+                    <div class="col-md-6">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, laudantium ullam. Officia qui accusamus molestias. Reprehenderit accusantium tempore cupiditate sequi, facilis voluptatem, voluptates minus odio harum maiores est dolorum repellendus!
+                        Quidem quam dignissimos unde commodi rem iusto magnam rerum laudantium delectus, numquam nam nobis odit, consequatur qui, modi cum nihil facere obcaecati excepturi? Repudiandae, maiores id. Officia, culpa? Dolore, quas.
+                        Possimus nemo perferendis asperiores repellendus accusamus cumque? Modi culpa sequi similique eligendi nisi veritatis nobis voluptates sapiente, officia ipsam quos optio velit consequatur architecto neque magnam recusandae est odio hic.
+                        Voluptates, soluta fuga impedit necessitatibus dolore ullam! Iure, atque voluptatem. Ipsam quibusdam magnam, et deserunt facilis laudantium, corrupti aperiam, explicabo doloremque accusantium recusandae esse fuga? Nostrum nesciunt omnis quae quidem!
+                        Perspiciatis, nesciunt. Atque alias nihil quasi esse ipsum dolorum! Necessitatibus, voluptatibus assumenda cum explicabo repellendus nam voluptatem molestiae voluptate in dolore dignissimos inventore modi at nisi, repellat distinctio nihil ex?
+                        Quasi, culpa illum. Ea officiis expedita impedit quas facere, totam voluptatibus ratione saepe soluta ut, repudiandae eum aperiam quia fuga nam id assumenda maxime quam sed iure, earum optio unde.
+                        Deleniti delectus vel assumenda id, laborum facilis at quibusdam autem esse corporis voluptate minima magni minus, necessitatibus qui nobis ab distinctio. Enim corporis excepturi omnis laudantium doloribus error labore cumque.
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--Filet Mignon Recipe Page-->
+            <div id="filet" class="col section">
+                <h3 style="text-align: center;">Filet Mignon Recipe!</h3>
+                <img src="https://downshiftology.com/wp-content/uploads/2023/02/How-To-Make-Filet-Mignon-5.jpg" class="mx-auto d-block" style="height: 200px; width: 300px;">
+                <p><b>Filet Mignon Steaks:</b> When purchasing filet mignon steaks (about 8-ounces each) from the butcher, keep your eyes peeled for a deep red color that’s free of any silver skin (connective tissue). And check to see if the steaks are soft to the touch when the butcher handles them!
+                    <br><b>Steak Seasoning:</b> All you need is a generous amount of salt and pepper. The basting butter is what’s going to give your filets enormous amounts of flavor.
+                    <br><b>Basting Butter:</b> This is a simple combination of unsalted butter, fresh rosemary, and fresh garlic cloves.</p>
+
+                <p><b>How to Cook Filet Mignon:</b><br>
+                    For this recipe, I use a cast iron pan as it helps to get a really good sear on the steaks. If you don’t have cast iron you can use an oven-safe stainless steel pan. Just don’t use a non-stick pan for this recipe!
+                    Prep the steaks. Remove the steaks from the fridge about 30 to 40 minutes before cooking so that they come to room temperature. Then generously season all sides with salt and pepper. Pat it in good!</p>
+                
+            </div>
+
+            <!--Lobster Thermidor Recipe Page-->
+            <div class="col section" id="lobster">
+                <h3 style="text-align: center;">Lobster Thermidor Recipe!</h3>
+                <img src="https://static01.nyt.com/images/2024/02/09/multimedia/LH-lobster-thermidor-plzk/LH-lobster-thermidor-plzk-superJumbo.jpg" class="img-fluid mx-auto d-block" style="height: 200px; width: 300px;">
+                <p><b>Lobster:</b> When purchasing filet mignon steaks (about 8-ounces each) from the butcher, keep your eyes peeled for a deep red color that’s free of any silver skin (connective tissue). And check to see if the steaks are soft to the touch when the butcher handles them!
+                    <br><b>Steak Seasoning:</b> All you need is a generous amount of salt and pepper. The basting butter is what’s going to give your filets enormous amounts of flavor.
+                    <br><b>Basting Butter:</b> This is a simple combination of unsalted butter, fresh rosemary, and fresh garlic cloves.</p>
+
+                <p><b>How to Cook Lobster Thermidor:</b><br>
+                    For this recipe, I use a cast iron pan as it helps to get a really good sear on the steaks. If you don’t have cast iron you can use an oven-safe stainless steel pan. Just don’t use a non-stick pan for this recipe!
+                    Prep the steaks. Remove the steaks from the fridge about 30 to 40 minutes before cooking so that they come to room temperature. Then generously season all sides with salt and pepper. Pat it in good!</p>
+            </div>
 
         </div>
     </div>
 
 
+    <div class="container">
+        <footer class="py-5" data-bs-theme="dark">
+            <div class="row">
+                <div class="d-flex flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>© 2022 Company, Inc. All rights reserved.</p>
+                    <div class="col-md-5">
+                        <form>
+                            <h5>Subscribe to our newsletter</h5>
+                            <p>Monthly digest of what's new and exciting from us.</p>
+                            <div class="d-flex flex-column flex-sm-row w-100 gap-2" bis_skin_checked="1">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--Changing inner content-->
+    <script>
+        function changePage(id) {
+            let sections = document.querySelectorAll('.section');
+            
+            sections.forEach((section) => {
+                section.classList.remove('active');
+            });
+
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({ top:-56, behavior: 'smooth' });
+        }
+    </script>
+    
     
 </body>
 </html>
