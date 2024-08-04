@@ -1,0 +1,43 @@
+.footer {
+  background-color: #f0efeb;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px dotted #fad2e1;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.newsletter-input {
+  padding: 8px;
+  border: 3px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.newsletter-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fde2e4;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.newsletter-button:hover {
+  background-color: #fad2e1;
+}
+
+p {
+  color: black;
+}

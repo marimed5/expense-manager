@@ -1,0 +1,69 @@
+.layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  line-height: 50px;
+  color: #739fbe;
+  background-color: #fff1e6;
+}
+
+#addExpense {
+  border-radius: 5px;
+  border: 2px solid #99c1de;
+  background-color: #bcd4e6;
+  padding: 20px;
+  transition: 0.3s ease, 0.3s ease;
+  margin-top: 30px;
+}
+
+#addExpense:hover {
+  border-radius: 5px;
+  border: 2px solid #99c1de;
+  padding: 25px;
+}
+
+#cancel {
+  border-radius: 5px;
+  border: 2px solid #99c1de;
+  background-color: #de99a5;
+  padding: 20px;
+  transition: 0.3s ease, 0.3s ease;
+  margin-right: 30px;
+}
+
+#cancel:hover {
+  border-radius: 5px;
+  border: 2px solid #99c1de;
+  padding: 25px;
+}
+
+input {
+  border: 2px dotted #99c1de;
+  color: black;
+  background-color: #f0efeb;
+  border-radius: 5px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+select {
+  border: 2px dotted #99c1de;
+  color: black;
+  border-radius: 5px;
+  height: 25px;
+  background-color: #f0efeb;
+}

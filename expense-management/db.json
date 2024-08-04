@@ -1,0 +1,46 @@
+{
+  "expenses": [
+    {
+      "id": "1",
+      "description": "Grocery shopping",
+      "amount": 50,
+      "date": "2024-08-01",
+      "category": "Groceries"
+    },
+    {
+      "id": "2",
+      "description": "Electricity bill",
+      "amount": 75,
+      "date": "2024-08-01",
+      "category": "Utilities"
+    },
+    {
+      "id": "3",
+      "description": "Restaurant dinner",
+      "amount": 40,
+      "date": "2024-08-02",
+      "category": "Dining"
+    },
+    {
+      "id": "4",
+      "description": "Public transport",
+      "amount": 15,
+      "date": "2024-08-02",
+      "category": "Transport"
+    },
+    {
+      "id": "5",
+      "description": "Internet",
+      "amount": 60,
+      "date": "2024-08-03",
+      "category": "Utilities"
+    },
+    {
+      "id": "1722721372020",
+      "description": "Train ticket",
+      "amount": 250,
+      "date": "2024-07-31",
+      "category": "Transport"
+    }
+  ]
+}
