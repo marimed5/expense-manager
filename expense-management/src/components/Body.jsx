@@ -19,20 +19,26 @@ function Body() {
   const [currExpense, setCurrExpense] = useState(null);
   const [searchDesc, setSearchDesc] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(null);
-  const [openFilter, setOpenFilter] = useState(false);
 
-  //Fetching list on mount
-  useEffect(() => {
+  //Fetch expenses
+  const getExpenses = (searchDesc) => {
+    const endpoint = searchDesc ? `?description=${searchDesc}` : "";
     axios
-      .get("http://localhost:3000/expenses")
+      .get(`http://localhost:3000/expenses${endpoint}`)
       .then((response) => {
         setExpenses(response.data);
         setLoading(false);
       })
       .catch((error) => {
-        console.log("Error in fetching data: ", error);
+        console.log("Error searching: ", error);
+        setLoading(false);
       });
-  });
+  };
+
+  //Fetch on mount
+  useEffect(() => {
+    getExpenses("");
+  }, []);
 
   //Getting icons for table
   const getIcon = (category) => {
@@ -92,24 +98,23 @@ function Body() {
       .catch((error) => console.log("Error deleting: ", error));
   };
 
-  //Hit API when inactive search
-  const handleSearch = () => {
+  //Debouncing on search
+  const handleSearch = (searchDesc) => {
     if (searchTimeout) {
       clearTimeout(searchTimeout);
     }
     const timeoutId = setTimeout(() => {
-      setOpenFilter(true);
-    }, 1000);
+      getExpenses(searchDesc);
+    }, 500);
     setSearchTimeout(timeoutId);
-    setOpenFilter(false);
   };
 
-  //Filter when openFilter is true
-  const filteredExpenses = openFilter
-    ? expenses.filter((expense) =>
-        expense.description.toLowerCase().includes(searchDesc.toLowerCase())
-      )
-    : expenses;
+  //Filter when openFilter is true through Front End (Flexible Search)
+  // const filteredExpenses = openFilter
+  //   ? expenses.filter((expense) =>
+  //       expense.description.toLowerCase().includes(searchDesc.toLowerCase())
+  //     )
+  //   : expenses;
 
   return (
     <>
@@ -140,14 +145,14 @@ function Body() {
             value={searchDesc}
             onChange={(e) => {
               setSearchDesc(e.target.value);
-              handleSearch();
+              handleSearch(e.target.value);
             }}
             id="searchArea"
           />
           <button
             type="submit"
             id="searchButton"
-            onClick={() => setOpenFilter(true)}
+            onClick={() => getExpenses(searchDesc)}
           >
             Filter
             <img src={filter} alt="filter" id="filterSign" />
@@ -171,7 +176,7 @@ function Body() {
             </tr>
           </thead>
           <tbody>
-            {filteredExpenses.map((expense) => (
+            {expenses.map((expense) => (
               <tr key={expense.id}>
                 <td className="iconsColumn">{getIcon(expense.category)}</td>
                 <td>{expense.description}</td>
